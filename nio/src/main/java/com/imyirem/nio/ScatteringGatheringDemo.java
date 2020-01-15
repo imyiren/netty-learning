@@ -33,7 +33,7 @@ public class ScatteringGatheringDemo {
         SocketChannel socketChannel = serverSocketChannel.accept();
 
         // 循环读取
-        // 假定从客户端接收8吧字节
+        // 假定从客户端接收8字节
         int messageLength = 8;
         while (true) {
             int byteRead = 0;
