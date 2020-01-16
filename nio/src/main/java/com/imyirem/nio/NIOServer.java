@@ -42,7 +42,7 @@ public class NIOServer {
             while (iterator.hasNext()) {
                 SelectionKey selectionKey = iterator.next();
 
-                // 根据key通道发生的事情，来做对应的处理
+                // 根据key通道发生的事情a，来做对应的处理
                 // 新的客户端连接 给客户端生成一个socketChannel
                 if (selectionKey.isAcceptable()) {
                     // accept方法是阻塞的，但是这个时候已经知道连接进来了，所以不会阻塞
