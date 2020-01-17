@@ -57,7 +57,7 @@ public class GroupChatServer {
                         socketChannel.configureBlocking(false);
                         // 将socketChannel 注册到selector，关注事件为OP_READ，同时给socketChannel关联一个Buffer
                         socketChannel.register(selector, SelectionKey.OP_READ);
-                        System.out.println("/" + socketChannel.getRemoteAddress() + " 上线");
+                        System.out.println(socketChannel.getRemoteAddress() + " 上线");
 
                     }
 
@@ -91,7 +91,7 @@ public class GroupChatServer {
                 return;
             }
             String msg = new  String(byteBuffer.array(), 0, len);
-            System.out.println("from client " + channel.getRemoteAddress() + " : " + msg);
+            System.out.println("from client : " + msg);
 
             sendInfo2otherChannel(msg, channel);
 
@@ -123,7 +123,9 @@ public class GroupChatServer {
         }
     }
 
-    public static void main(String[] args) {
-
+    public static void startServer() {
+        GroupChatServer groupChatServer = new GroupChatServer();
+        groupChatServer.listen();
     }
+
 }
