@@ -71,6 +71,7 @@ public class GroupChatClient {
                     String msg = new String(buffer.array(), 0, buffer.position());
                     System.out.println(msg);
                 }
+                iterator.remove();
             }
         } catch (IOException e) {
             e.printStackTrace();
