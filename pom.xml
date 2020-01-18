@@ -11,6 +11,7 @@
     <modules>
         <module>bio</module>
         <module>nio</module>
+        <module>netty</module>
     </modules>
 
 
