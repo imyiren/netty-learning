@@ -11,8 +11,9 @@ public class NettyServer {
         // 创建BossGroup 和 WorkGroup
         // 1. bossGroup 只处理连接请求 真正和客户端处理业务 会 交给workGroup
         // 2. 两个group都是无限循环
-        EventLoopGroup bossGroup = new NioEventLoopGroup();
-        EventLoopGroup workGroup = new NioEventLoopGroup();
+        // 3. nioEventLoopGroup 默认的线程个数就是CPU核心数的 * 2
+        EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+        EventLoopGroup workGroup = new NioEventLoopGroup(8);
         try {
 
             // 穿件服务器端的启动对象，配置参数
@@ -37,6 +38,8 @@ public class NettyServer {
                          */
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            // 可以使用一个集合管理socketChannel
+                            // 需要推送消息时，可以将各个业务加入到channel对应的NioEventLoop的 taskQueue scheduleTaskQueue
                             ChannelPipeline pipeline = socketChannel.pipeline();
                             // 向管道最后添加处理器
                             pipeline.addLast(new NettyServerHandler());
@@ -46,6 +49,14 @@ public class NettyServer {
             System.out.println("Server is ready!");
             // 绑定一个端口，并且同步，生成一个ChannelFuture对象 | 这里相当于启动服务器了
             ChannelFuture channelFuture = bootstrap.bind(6668).sync();
+            // 注册一个事件监听器
+            channelFuture.addListener(future -> {
+                if (channelFuture.isSuccess()) {
+                    System.out.println("bind 6668 success!");
+                } else {
+                    System.out.println("bind 6668 failed!");
+                }
+            });
 
             // 对关闭通道进行监听
             channelFuture.channel().closeFuture().sync();
