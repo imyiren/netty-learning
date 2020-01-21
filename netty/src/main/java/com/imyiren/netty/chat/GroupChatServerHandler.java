@@ -9,6 +9,8 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -23,6 +25,8 @@ public class GroupChatServerHandler extends SimpleChannelInboundHandler<String> 
 
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
+    private static Map<String, Channel> channelMap = new HashMap<>();
+
 
     /**
      * 表示连接建立，一旦连接，这个方法第一个被执行 需要将当前的 channel加入到channelGroup
@@ -36,6 +40,10 @@ public class GroupChatServerHandler extends SimpleChannelInboundHandler<String> 
         // 将该该客户端 加入聊天的信息，推送给其他的在线客户端  (这个方法会遍历所有的channel并发送信息， 这个ChannelGroup实现了Set接口)
         channelGroup.writeAndFlush("[Client] " + channel.remoteAddress() + " join in group chat. \n");
         channelGroup.add(channel);
+
+        // 私聊实现
+        // 可以使用id来唯一标识这个人 然后通过这个id来找到对应的channel，来实现私聊
+        channelMap.put("id100", channel);
     }
 
     /**
