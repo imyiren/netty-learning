@@ -24,7 +24,6 @@ public class GroupChatServerHandler extends SimpleChannelInboundHandler<String> 
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
 
-
     /**
      * 表示连接建立，一旦连接，这个方法第一个被执行 需要将当前的 channel加入到channelGroup
      *

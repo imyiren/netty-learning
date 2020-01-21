@@ -41,7 +41,7 @@ public class NettyClient {
             // 给关闭的通道进行监听
             channelFuture.channel().closeFuture().sync();
 
-        }finally {
+        } finally {
             eventLoopGroup.shutdownGracefully();
         }
     }

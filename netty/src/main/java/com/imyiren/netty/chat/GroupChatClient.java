@@ -70,7 +70,7 @@ public class GroupChatClient {
 
             channel.closeFuture().sync();
 
-        }finally {
+        } finally {
             eventLoopGroup.shutdownGracefully();
         }
 

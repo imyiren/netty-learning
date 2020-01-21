@@ -11,7 +11,7 @@ public class TestServerInitializer extends ChannelInitializer<SocketChannel> {
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
-        ch.pipeline().addLast("HttpServerCodec",new HttpServerCodec());
+        ch.pipeline().addLast("HttpServerCodec", new HttpServerCodec());
         //HttpServerCodec 是netty提供的处理http的编码解码器
         ch.pipeline().addLast("TestServerHandler", new TestServerHandler());
 

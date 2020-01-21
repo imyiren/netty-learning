@@ -12,6 +12,7 @@ import java.net.URI;
 /**
  * SimpleChannelInboundHandler 是 ChannelInboundHandlerAdapter的子类
  * HttpObject 表示的是，客户端和服务端相互通信的数据被封装成HttpObject
+ *
  * @author feng
  */
 public class TestServerHandler extends SimpleChannelInboundHandler<HttpObject> {

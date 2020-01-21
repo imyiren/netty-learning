@@ -68,12 +68,11 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     //     System.out.println("go on...");
     //
     // }
-
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         // 第一个方案： 用户自定义定时任务来完成 该任务是提交到scheduleTaskQueue中
         // 5s后执行
-        ctx.channel().eventLoop().schedule(()->{
+        ctx.channel().eventLoop().schedule(() -> {
             try {
                 Thread.sleep(5 * 1000);
             } catch (InterruptedException e) {
@@ -81,7 +80,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
                 e.printStackTrace();
             }
             ctx.writeAndFlush(Unpooled.copiedBuffer("hello, Client - long time 1", CharsetUtil.UTF_8));
-        },5, TimeUnit.SECONDS);
+        }, 5, TimeUnit.SECONDS);
 
         System.out.println("go on...");
 

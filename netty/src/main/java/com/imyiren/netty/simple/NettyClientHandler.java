@@ -13,6 +13,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
     /**
      * 当通道就绪时 就会触发该方法
+     *
      * @param ctx 上下文
      * @throws Exception
      */
@@ -24,6 +25,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
     /**
      * 当通道有读取事件时 会触发。
+     *
      * @param ctx
      * @param msg
      * @throws Exception
