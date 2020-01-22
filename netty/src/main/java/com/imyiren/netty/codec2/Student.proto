@@ -1,0 +1,30 @@
+// 版本
+syntax = "proto3";
+option optimize_for = SPEED;
+option java_package = "com.imyiren.netty.codec2";
+option java_outer_classname = "DataInfo";
+
+message Message{
+    enum DataType {
+        StudentType = 0;
+        WorkerType = 1;
+    }
+
+    DataType data_type = 1;
+
+    // 表示每次枚举类型最多只能出现其中一个， 节省空间
+    oneof dataBody {
+        Student student = 2;
+        Worker worker = 3;
+    }
+}
+
+message Student {
+    int32 id = 1;
+    string name = 2;
+}
+
+message Worker {
+    string name = 1;
+    int32 age = 2;
+}
