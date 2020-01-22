@@ -15,7 +15,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class HeartBeatServer {
     public static void main(String[] args) throws InterruptedException {

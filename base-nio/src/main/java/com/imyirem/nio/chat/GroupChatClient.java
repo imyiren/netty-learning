@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class GroupChatClient {
     // 服务器ip

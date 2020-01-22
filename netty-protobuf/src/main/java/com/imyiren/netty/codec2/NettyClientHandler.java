@@ -9,7 +9,7 @@ import io.netty.util.CharsetUtil;
 import java.util.Random;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 

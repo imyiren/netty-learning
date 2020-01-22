@@ -7,7 +7,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 

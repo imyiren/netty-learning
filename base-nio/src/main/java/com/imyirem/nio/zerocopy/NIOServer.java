@@ -8,7 +8,7 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NIOServer {
     public static void main(String[] args) throws IOException {

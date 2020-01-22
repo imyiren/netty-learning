@@ -11,7 +11,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import java.net.InetSocketAddress;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NettyClient {
     public static void main(String[] args) throws InterruptedException {

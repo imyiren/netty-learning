@@ -16,7 +16,7 @@ import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.stream.ChunkedWriteHandler;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class WebSocketServer {
     public static void main(String[] args) throws InterruptedException {

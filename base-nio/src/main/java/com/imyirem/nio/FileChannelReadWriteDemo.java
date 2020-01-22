@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class FileChannelReadWriteDemo {
     public static void main(String[] args) throws IOException {

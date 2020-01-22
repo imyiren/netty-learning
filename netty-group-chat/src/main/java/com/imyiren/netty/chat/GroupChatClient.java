@@ -11,7 +11,7 @@ import io.netty.handler.codec.string.StringEncoder;
 import java.util.Scanner;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class GroupChatClient {
     private String host;

@@ -3,7 +3,7 @@ package com.imyirem.nio;
 import java.nio.ByteBuffer;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class BufferPutGetByTypeDemo {
     public static void main(String[] args) {

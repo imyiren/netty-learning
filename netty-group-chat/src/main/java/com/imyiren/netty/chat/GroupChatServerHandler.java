@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 /**
- * @author feng
+ * @author yiren
  */
 public class GroupChatServerHandler extends SimpleChannelInboundHandler<String> {
     /**

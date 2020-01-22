@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * 自定义一个handler， 需要继承netty规定好的 某个 HandlerAdapter
  * 这时我们自定义的Handler，才能称为handler。 ChannelInboundHandlerAdapter:
  *
- * @author feng
+ * @author yiren
  */
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 

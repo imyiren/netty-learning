@@ -12,7 +12,7 @@ import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import java.net.InetSocketAddress;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NettyClient {
     public static void main(String[] args) throws InterruptedException {

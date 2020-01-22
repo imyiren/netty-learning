@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NettyServerHandler extends SimpleChannelInboundHandler<StudentPOJO.Student> {
 

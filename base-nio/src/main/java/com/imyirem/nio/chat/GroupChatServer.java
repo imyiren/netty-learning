@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class GroupChatServer {
 

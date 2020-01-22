@@ -1,7 +1,7 @@
 package com.imyiren.netty.chat;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class Client1 {
 

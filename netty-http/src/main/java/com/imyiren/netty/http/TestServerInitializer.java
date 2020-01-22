@@ -5,7 +5,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpServerCodec;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class TestServerInitializer extends ChannelInitializer<SocketChannel> {
 

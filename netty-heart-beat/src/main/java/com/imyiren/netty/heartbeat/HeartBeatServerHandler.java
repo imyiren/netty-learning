@@ -5,7 +5,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleStateEvent;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class HeartBeatServerHandler extends ChannelInboundHandlerAdapter {
     @Override

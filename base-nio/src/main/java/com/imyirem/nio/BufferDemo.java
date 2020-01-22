@@ -3,7 +3,7 @@ package com.imyirem.nio;
 import java.nio.IntBuffer;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class BufferDemo {
 

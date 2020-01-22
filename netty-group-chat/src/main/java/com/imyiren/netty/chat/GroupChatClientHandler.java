@@ -4,7 +4,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class GroupChatClientHandler extends SimpleChannelInboundHandler<String> {
     @Override

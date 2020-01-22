@@ -9,7 +9,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Arrays;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class ScatteringGatheringDemo {
     public static void main(String[] args) throws IOException {

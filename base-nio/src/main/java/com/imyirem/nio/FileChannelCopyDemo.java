@@ -8,7 +8,7 @@ import java.net.URL;
 import java.nio.channels.FileChannel;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class FileChannelCopyDemo {
     public static void main(String[] args) throws IOException {

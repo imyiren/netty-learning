@@ -2,7 +2,7 @@ package com.imyiren.netty.heartbeat;
 
 
 /**
- * @author feng
+ * @author yiren
  */
 public class Client {
 

@@ -7,7 +7,7 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.SocketChannel;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NIOClient {
     public static void main(String[] args) throws IOException {

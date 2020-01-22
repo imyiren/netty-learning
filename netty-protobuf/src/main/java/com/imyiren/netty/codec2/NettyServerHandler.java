@@ -5,7 +5,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 
 
 /**
- * @author feng
+ * @author yiren
  */
 public class NettyServerHandler extends SimpleChannelInboundHandler<DataInfo.Message> {
 

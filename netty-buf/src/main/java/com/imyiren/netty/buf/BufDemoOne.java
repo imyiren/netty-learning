@@ -4,7 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class BufDemoOne {
     public static void main(String[] args) {

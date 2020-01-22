@@ -8,7 +8,7 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class MappedByteBufferDemo {
     public static void main(String[] args) throws IOException {

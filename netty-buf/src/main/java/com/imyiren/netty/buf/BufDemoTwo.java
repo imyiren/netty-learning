@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @author feng
+ * @author yiren
  */
 public class BufDemoTwo {
     public static void main(String[] args) {
