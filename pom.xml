@@ -12,7 +12,26 @@
         <module>bio</module>
         <module>nio</module>
         <module>netty</module>
+        <module>netty-simple</module>
+        <module>netty-websokcet</module>
+        <module>netty-http</module>
+        <module>netty-protobuf</module>
+        <module>netty-group-chat</module>
+        <module>netty-buf</module>
+        <module>netty-heart-beat</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.45.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.11.1</version>
+        </dependency>
+    </dependencies>
 
 </project>

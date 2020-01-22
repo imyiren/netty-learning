@@ -1,6 +1,5 @@
 package com.imyiren.netty.heartbeat;
 
-import com.imyiren.netty.chat.GroupChatClient;
 
 /**
  * @author feng

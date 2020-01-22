@@ -27,7 +27,7 @@ public final class DataInfo {
      * <code>.Message.DataType data_type = 1;</code>
      * @return The dataType.
      */
-    com.imyiren.netty.codec2.DataInfo.Message.DataType getDataType();
+    Message.DataType getDataType();
 
     /**
      * <code>.Student student = 2;</code>
@@ -38,11 +38,11 @@ public final class DataInfo {
      * <code>.Student student = 2;</code>
      * @return The student.
      */
-    com.imyiren.netty.codec2.DataInfo.Student getStudent();
+    Student getStudent();
     /**
      * <code>.Student student = 2;</code>
      */
-    com.imyiren.netty.codec2.DataInfo.StudentOrBuilder getStudentOrBuilder();
+    StudentOrBuilder getStudentOrBuilder();
 
     /**
      * <code>.Worker worker = 3;</code>
@@ -53,13 +53,13 @@ public final class DataInfo {
      * <code>.Worker worker = 3;</code>
      * @return The worker.
      */
-    com.imyiren.netty.codec2.DataInfo.Worker getWorker();
+    Worker getWorker();
     /**
      * <code>.Worker worker = 3;</code>
      */
-    com.imyiren.netty.codec2.DataInfo.WorkerOrBuilder getWorkerOrBuilder();
+    WorkerOrBuilder getWorkerOrBuilder();
 
-    public com.imyiren.netty.codec2.DataInfo.Message.DataBodyCase getDataBodyCase();
+    public Message.DataBodyCase getDataBodyCase();
   }
   /**
    * Protobuf type {@code Message}
@@ -77,14 +77,14 @@ public final class DataInfo {
       dataType_ = 0;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Message();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -95,7 +95,7 @@ public final class DataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -114,28 +114,28 @@ public final class DataInfo {
               break;
             }
             case 18: {
-              com.imyiren.netty.codec2.DataInfo.Student.Builder subBuilder = null;
+              Student.Builder subBuilder = null;
               if (dataBodyCase_ == 2) {
-                subBuilder = ((com.imyiren.netty.codec2.DataInfo.Student) dataBody_).toBuilder();
+                subBuilder = ((Student) dataBody_).toBuilder();
               }
               dataBody_ =
-                  input.readMessage(com.imyiren.netty.codec2.DataInfo.Student.parser(), extensionRegistry);
+                  input.readMessage(Student.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.imyiren.netty.codec2.DataInfo.Student) dataBody_);
+                subBuilder.mergeFrom((Student) dataBody_);
                 dataBody_ = subBuilder.buildPartial();
               }
               dataBodyCase_ = 2;
               break;
             }
             case 26: {
-              com.imyiren.netty.codec2.DataInfo.Worker.Builder subBuilder = null;
+              Worker.Builder subBuilder = null;
               if (dataBodyCase_ == 3) {
-                subBuilder = ((com.imyiren.netty.codec2.DataInfo.Worker) dataBody_).toBuilder();
+                subBuilder = ((Worker) dataBody_).toBuilder();
               }
               dataBody_ =
-                  input.readMessage(com.imyiren.netty.codec2.DataInfo.Worker.parser(), extensionRegistry);
+                  input.readMessage(Worker.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.imyiren.netty.codec2.DataInfo.Worker) dataBody_);
+                subBuilder.mergeFrom((Worker) dataBody_);
                 dataBody_ = subBuilder.buildPartial();
               }
               dataBodyCase_ = 3;
@@ -162,15 +162,15 @@ public final class DataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.imyiren.netty.codec2.DataInfo.internal_static_Message_descriptor;
+      return DataInfo.internal_static_Message_descriptor;
     }
 
-    @java.lang.Override
+    @Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.imyiren.netty.codec2.DataInfo.internal_static_Message_fieldAccessorTable
+      return DataInfo.internal_static_Message_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.imyiren.netty.codec2.DataInfo.Message.class, com.imyiren.netty.codec2.DataInfo.Message.Builder.class);
+              Message.class, Builder.class);
     }
 
     /**
@@ -201,7 +201,7 @@ public final class DataInfo {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -212,7 +212,7 @@ public final class DataInfo {
        * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static DataType valueOf(int value) {
         return forNumber(value);
       }
@@ -251,7 +251,7 @@ public final class DataInfo {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return com.imyiren.netty.codec2.DataInfo.Message.getDescriptor().getEnumTypes().get(0);
+        return Message.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final DataType[] VALUES = values();
@@ -259,7 +259,7 @@ public final class DataInfo {
       public static DataType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -278,7 +278,7 @@ public final class DataInfo {
     }
 
     private int dataBodyCase_ = 0;
-    private java.lang.Object dataBody_;
+    private Object dataBody_;
     public enum DataBodyCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
@@ -294,7 +294,7 @@ public final class DataInfo {
        * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static DataBodyCase valueOf(int value) {
         return forNumber(value);
       }
@@ -331,10 +331,10 @@ public final class DataInfo {
      * <code>.Message.DataType data_type = 1;</code>
      * @return The dataType.
      */
-    public com.imyiren.netty.codec2.DataInfo.Message.DataType getDataType() {
+    public DataType getDataType() {
       @SuppressWarnings("deprecation")
-      com.imyiren.netty.codec2.DataInfo.Message.DataType result = com.imyiren.netty.codec2.DataInfo.Message.DataType.valueOf(dataType_);
-      return result == null ? com.imyiren.netty.codec2.DataInfo.Message.DataType.UNRECOGNIZED : result;
+      DataType result = DataType.valueOf(dataType_);
+      return result == null ? DataType.UNRECOGNIZED : result;
     }
 
     public static final int STUDENT_FIELD_NUMBER = 2;
@@ -349,20 +349,20 @@ public final class DataInfo {
      * <code>.Student student = 2;</code>
      * @return The student.
      */
-    public com.imyiren.netty.codec2.DataInfo.Student getStudent() {
+    public Student getStudent() {
       if (dataBodyCase_ == 2) {
-         return (com.imyiren.netty.codec2.DataInfo.Student) dataBody_;
+         return (Student) dataBody_;
       }
-      return com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance();
+      return Student.getDefaultInstance();
     }
     /**
      * <code>.Student student = 2;</code>
      */
-    public com.imyiren.netty.codec2.DataInfo.StudentOrBuilder getStudentOrBuilder() {
+    public StudentOrBuilder getStudentOrBuilder() {
       if (dataBodyCase_ == 2) {
-         return (com.imyiren.netty.codec2.DataInfo.Student) dataBody_;
+         return (Student) dataBody_;
       }
-      return com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance();
+      return Student.getDefaultInstance();
     }
 
     public static final int WORKER_FIELD_NUMBER = 3;
@@ -377,24 +377,24 @@ public final class DataInfo {
      * <code>.Worker worker = 3;</code>
      * @return The worker.
      */
-    public com.imyiren.netty.codec2.DataInfo.Worker getWorker() {
+    public Worker getWorker() {
       if (dataBodyCase_ == 3) {
-         return (com.imyiren.netty.codec2.DataInfo.Worker) dataBody_;
+         return (Worker) dataBody_;
       }
-      return com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance();
+      return Worker.getDefaultInstance();
     }
     /**
      * <code>.Worker worker = 3;</code>
      */
-    public com.imyiren.netty.codec2.DataInfo.WorkerOrBuilder getWorkerOrBuilder() {
+    public WorkerOrBuilder getWorkerOrBuilder() {
       if (dataBodyCase_ == 3) {
-         return (com.imyiren.netty.codec2.DataInfo.Worker) dataBody_;
+         return (Worker) dataBody_;
       }
-      return com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance();
+      return Worker.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -404,53 +404,53 @@ public final class DataInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataType_ != com.imyiren.netty.codec2.DataInfo.Message.DataType.StudentType.getNumber()) {
+      if (dataType_ != DataType.StudentType.getNumber()) {
         output.writeEnum(1, dataType_);
       }
       if (dataBodyCase_ == 2) {
-        output.writeMessage(2, (com.imyiren.netty.codec2.DataInfo.Student) dataBody_);
+        output.writeMessage(2, (Student) dataBody_);
       }
       if (dataBodyCase_ == 3) {
-        output.writeMessage(3, (com.imyiren.netty.codec2.DataInfo.Worker) dataBody_);
+        output.writeMessage(3, (Worker) dataBody_);
       }
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (dataType_ != com.imyiren.netty.codec2.DataInfo.Message.DataType.StudentType.getNumber()) {
+      if (dataType_ != DataType.StudentType.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, dataType_);
       }
       if (dataBodyCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.imyiren.netty.codec2.DataInfo.Student) dataBody_);
+          .computeMessageSize(2, (Student) dataBody_);
       }
       if (dataBodyCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.imyiren.netty.codec2.DataInfo.Worker) dataBody_);
+          .computeMessageSize(3, (Worker) dataBody_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.imyiren.netty.codec2.DataInfo.Message)) {
+      if (!(obj instanceof Message)) {
         return super.equals(obj);
       }
-      com.imyiren.netty.codec2.DataInfo.Message other = (com.imyiren.netty.codec2.DataInfo.Message) obj;
+      Message other = (Message) obj;
 
       if (dataType_ != other.dataType_) return false;
       if (!getDataBodyCase().equals(other.getDataBodyCase())) return false;
@@ -470,7 +470,7 @@ public final class DataInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -496,69 +496,69 @@ public final class DataInfo {
       return hash;
     }
 
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(byte[] data)
+    public static Message parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(java.io.InputStream input)
+    public static Message parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseDelimitedFrom(java.io.InputStream input)
+    public static Message parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseDelimitedFrom(
+    public static Message parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Message parseFrom(
+    public static Message parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -566,21 +566,21 @@ public final class DataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.imyiren.netty.codec2.DataInfo.Message prototype) {
+    public static Builder newBuilder(Message prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -592,18 +592,18 @@ public final class DataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Message)
-        com.imyiren.netty.codec2.DataInfo.MessageOrBuilder {
+        MessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Message_descriptor;
+        return DataInfo.internal_static_Message_descriptor;
       }
 
-      @java.lang.Override
+      @Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Message_fieldAccessorTable
+        return DataInfo.internal_static_Message_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.imyiren.netty.codec2.DataInfo.Message.class, com.imyiren.netty.codec2.DataInfo.Message.Builder.class);
+                Message.class, Builder.class);
       }
 
       // Construct using com.imyiren.netty.codec2.DataInfo.Message.newBuilder()
@@ -621,7 +621,7 @@ public final class DataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         dataType_ = 0;
@@ -631,29 +631,29 @@ public final class DataInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Message_descriptor;
+        return DataInfo.internal_static_Message_descriptor;
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Message getDefaultInstanceForType() {
-        return com.imyiren.netty.codec2.DataInfo.Message.getDefaultInstance();
+      @Override
+      public Message getDefaultInstanceForType() {
+        return Message.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Message build() {
-        com.imyiren.netty.codec2.DataInfo.Message result = buildPartial();
+      @Override
+      public Message build() {
+        Message result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Message buildPartial() {
-        com.imyiren.netty.codec2.DataInfo.Message result = new com.imyiren.netty.codec2.DataInfo.Message(this);
+      @Override
+      public Message buildPartial() {
+        Message result = new Message(this);
         result.dataType_ = dataType_;
         if (dataBodyCase_ == 2) {
           if (studentBuilder_ == null) {
@@ -674,50 +674,50 @@ public final class DataInfo {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.imyiren.netty.codec2.DataInfo.Message) {
-          return mergeFrom((com.imyiren.netty.codec2.DataInfo.Message)other);
+        if (other instanceof Message) {
+          return mergeFrom((Message)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.imyiren.netty.codec2.DataInfo.Message other) {
-        if (other == com.imyiren.netty.codec2.DataInfo.Message.getDefaultInstance()) return this;
+      public Builder mergeFrom(Message other) {
+        if (other == Message.getDefaultInstance()) return this;
         if (other.dataType_ != 0) {
           setDataTypeValue(other.getDataTypeValue());
         }
@@ -739,21 +739,21 @@ public final class DataInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.imyiren.netty.codec2.DataInfo.Message parsedMessage = null;
+        Message parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.imyiren.netty.codec2.DataInfo.Message) e.getUnfinishedMessage();
+          parsedMessage = (Message) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -763,7 +763,7 @@ public final class DataInfo {
         return this;
       }
       private int dataBodyCase_ = 0;
-      private java.lang.Object dataBody_;
+      private Object dataBody_;
       public DataBodyCase
           getDataBodyCase() {
         return DataBodyCase.forNumber(
@@ -800,17 +800,17 @@ public final class DataInfo {
        * <code>.Message.DataType data_type = 1;</code>
        * @return The dataType.
        */
-      public com.imyiren.netty.codec2.DataInfo.Message.DataType getDataType() {
+      public DataType getDataType() {
         @SuppressWarnings("deprecation")
-        com.imyiren.netty.codec2.DataInfo.Message.DataType result = com.imyiren.netty.codec2.DataInfo.Message.DataType.valueOf(dataType_);
-        return result == null ? com.imyiren.netty.codec2.DataInfo.Message.DataType.UNRECOGNIZED : result;
+        DataType result = DataType.valueOf(dataType_);
+        return result == null ? DataType.UNRECOGNIZED : result;
       }
       /**
        * <code>.Message.DataType data_type = 1;</code>
        * @param value The dataType to set.
        * @return This builder for chaining.
        */
-      public Builder setDataType(com.imyiren.netty.codec2.DataInfo.Message.DataType value) {
+      public Builder setDataType(DataType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -831,7 +831,7 @@ public final class DataInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.imyiren.netty.codec2.DataInfo.Student, com.imyiren.netty.codec2.DataInfo.Student.Builder, com.imyiren.netty.codec2.DataInfo.StudentOrBuilder> studentBuilder_;
+          Student, Student.Builder, StudentOrBuilder> studentBuilder_;
       /**
        * <code>.Student student = 2;</code>
        * @return Whether the student field is set.
@@ -843,23 +843,23 @@ public final class DataInfo {
        * <code>.Student student = 2;</code>
        * @return The student.
        */
-      public com.imyiren.netty.codec2.DataInfo.Student getStudent() {
+      public Student getStudent() {
         if (studentBuilder_ == null) {
           if (dataBodyCase_ == 2) {
-            return (com.imyiren.netty.codec2.DataInfo.Student) dataBody_;
+            return (Student) dataBody_;
           }
-          return com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance();
+          return Student.getDefaultInstance();
         } else {
           if (dataBodyCase_ == 2) {
             return studentBuilder_.getMessage();
           }
-          return com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance();
+          return Student.getDefaultInstance();
         }
       }
       /**
        * <code>.Student student = 2;</code>
        */
-      public Builder setStudent(com.imyiren.netty.codec2.DataInfo.Student value) {
+      public Builder setStudent(Student value) {
         if (studentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -876,7 +876,7 @@ public final class DataInfo {
        * <code>.Student student = 2;</code>
        */
       public Builder setStudent(
-          com.imyiren.netty.codec2.DataInfo.Student.Builder builderForValue) {
+          Student.Builder builderForValue) {
         if (studentBuilder_ == null) {
           dataBody_ = builderForValue.build();
           onChanged();
@@ -889,11 +889,11 @@ public final class DataInfo {
       /**
        * <code>.Student student = 2;</code>
        */
-      public Builder mergeStudent(com.imyiren.netty.codec2.DataInfo.Student value) {
+      public Builder mergeStudent(Student value) {
         if (studentBuilder_ == null) {
           if (dataBodyCase_ == 2 &&
-              dataBody_ != com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance()) {
-            dataBody_ = com.imyiren.netty.codec2.DataInfo.Student.newBuilder((com.imyiren.netty.codec2.DataInfo.Student) dataBody_)
+              dataBody_ != Student.getDefaultInstance()) {
+            dataBody_ = Student.newBuilder((Student) dataBody_)
                 .mergeFrom(value).buildPartial();
           } else {
             dataBody_ = value;
@@ -930,35 +930,35 @@ public final class DataInfo {
       /**
        * <code>.Student student = 2;</code>
        */
-      public com.imyiren.netty.codec2.DataInfo.Student.Builder getStudentBuilder() {
+      public Student.Builder getStudentBuilder() {
         return getStudentFieldBuilder().getBuilder();
       }
       /**
        * <code>.Student student = 2;</code>
        */
-      public com.imyiren.netty.codec2.DataInfo.StudentOrBuilder getStudentOrBuilder() {
+      public StudentOrBuilder getStudentOrBuilder() {
         if ((dataBodyCase_ == 2) && (studentBuilder_ != null)) {
           return studentBuilder_.getMessageOrBuilder();
         } else {
           if (dataBodyCase_ == 2) {
-            return (com.imyiren.netty.codec2.DataInfo.Student) dataBody_;
+            return (Student) dataBody_;
           }
-          return com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance();
+          return Student.getDefaultInstance();
         }
       }
       /**
        * <code>.Student student = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.imyiren.netty.codec2.DataInfo.Student, com.imyiren.netty.codec2.DataInfo.Student.Builder, com.imyiren.netty.codec2.DataInfo.StudentOrBuilder> 
+          Student, Student.Builder, StudentOrBuilder>
           getStudentFieldBuilder() {
         if (studentBuilder_ == null) {
           if (!(dataBodyCase_ == 2)) {
-            dataBody_ = com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance();
+            dataBody_ = Student.getDefaultInstance();
           }
           studentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.imyiren.netty.codec2.DataInfo.Student, com.imyiren.netty.codec2.DataInfo.Student.Builder, com.imyiren.netty.codec2.DataInfo.StudentOrBuilder>(
-                  (com.imyiren.netty.codec2.DataInfo.Student) dataBody_,
+              Student, Student.Builder, StudentOrBuilder>(
+                  (Student) dataBody_,
                   getParentForChildren(),
                   isClean());
           dataBody_ = null;
@@ -969,7 +969,7 @@ public final class DataInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.imyiren.netty.codec2.DataInfo.Worker, com.imyiren.netty.codec2.DataInfo.Worker.Builder, com.imyiren.netty.codec2.DataInfo.WorkerOrBuilder> workerBuilder_;
+          Worker, Worker.Builder, WorkerOrBuilder> workerBuilder_;
       /**
        * <code>.Worker worker = 3;</code>
        * @return Whether the worker field is set.
@@ -981,23 +981,23 @@ public final class DataInfo {
        * <code>.Worker worker = 3;</code>
        * @return The worker.
        */
-      public com.imyiren.netty.codec2.DataInfo.Worker getWorker() {
+      public Worker getWorker() {
         if (workerBuilder_ == null) {
           if (dataBodyCase_ == 3) {
-            return (com.imyiren.netty.codec2.DataInfo.Worker) dataBody_;
+            return (Worker) dataBody_;
           }
-          return com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance();
+          return Worker.getDefaultInstance();
         } else {
           if (dataBodyCase_ == 3) {
             return workerBuilder_.getMessage();
           }
-          return com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance();
+          return Worker.getDefaultInstance();
         }
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Builder setWorker(com.imyiren.netty.codec2.DataInfo.Worker value) {
+      public Builder setWorker(Worker value) {
         if (workerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1014,7 +1014,7 @@ public final class DataInfo {
        * <code>.Worker worker = 3;</code>
        */
       public Builder setWorker(
-          com.imyiren.netty.codec2.DataInfo.Worker.Builder builderForValue) {
+          Worker.Builder builderForValue) {
         if (workerBuilder_ == null) {
           dataBody_ = builderForValue.build();
           onChanged();
@@ -1027,11 +1027,11 @@ public final class DataInfo {
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Builder mergeWorker(com.imyiren.netty.codec2.DataInfo.Worker value) {
+      public Builder mergeWorker(Worker value) {
         if (workerBuilder_ == null) {
           if (dataBodyCase_ == 3 &&
-              dataBody_ != com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance()) {
-            dataBody_ = com.imyiren.netty.codec2.DataInfo.Worker.newBuilder((com.imyiren.netty.codec2.DataInfo.Worker) dataBody_)
+              dataBody_ != Worker.getDefaultInstance()) {
+            dataBody_ = Worker.newBuilder((Worker) dataBody_)
                 .mergeFrom(value).buildPartial();
           } else {
             dataBody_ = value;
@@ -1068,35 +1068,35 @@ public final class DataInfo {
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public com.imyiren.netty.codec2.DataInfo.Worker.Builder getWorkerBuilder() {
+      public Worker.Builder getWorkerBuilder() {
         return getWorkerFieldBuilder().getBuilder();
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public com.imyiren.netty.codec2.DataInfo.WorkerOrBuilder getWorkerOrBuilder() {
+      public WorkerOrBuilder getWorkerOrBuilder() {
         if ((dataBodyCase_ == 3) && (workerBuilder_ != null)) {
           return workerBuilder_.getMessageOrBuilder();
         } else {
           if (dataBodyCase_ == 3) {
-            return (com.imyiren.netty.codec2.DataInfo.Worker) dataBody_;
+            return (Worker) dataBody_;
           }
-          return com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance();
+          return Worker.getDefaultInstance();
         }
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.imyiren.netty.codec2.DataInfo.Worker, com.imyiren.netty.codec2.DataInfo.Worker.Builder, com.imyiren.netty.codec2.DataInfo.WorkerOrBuilder> 
+          Worker, Worker.Builder, WorkerOrBuilder>
           getWorkerFieldBuilder() {
         if (workerBuilder_ == null) {
           if (!(dataBodyCase_ == 3)) {
-            dataBody_ = com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance();
+            dataBody_ = Worker.getDefaultInstance();
           }
           workerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.imyiren.netty.codec2.DataInfo.Worker, com.imyiren.netty.codec2.DataInfo.Worker.Builder, com.imyiren.netty.codec2.DataInfo.WorkerOrBuilder>(
-                  (com.imyiren.netty.codec2.DataInfo.Worker) dataBody_,
+              Worker, Worker.Builder, WorkerOrBuilder>(
+                  (Worker) dataBody_,
                   getParentForChildren(),
                   isClean());
           dataBody_ = null;
@@ -1105,13 +1105,13 @@ public final class DataInfo {
         onChanged();;
         return workerBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1122,18 +1122,18 @@ public final class DataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:Message)
-    private static final com.imyiren.netty.codec2.DataInfo.Message DEFAULT_INSTANCE;
+    private static final Message DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.imyiren.netty.codec2.DataInfo.Message();
+      DEFAULT_INSTANCE = new Message();
     }
 
-    public static com.imyiren.netty.codec2.DataInfo.Message getDefaultInstance() {
+    public static Message getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Message>
         PARSER = new com.google.protobuf.AbstractParser<Message>() {
-      @java.lang.Override
+      @Override
       public Message parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1146,13 +1146,13 @@ public final class DataInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Message> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.imyiren.netty.codec2.DataInfo.Message getDefaultInstanceForType() {
+    @Override
+    public Message getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1172,7 +1172,7 @@ public final class DataInfo {
      * <code>string name = 2;</code>
      * @return The name.
      */
-    java.lang.String getName();
+    String getName();
     /**
      * <code>string name = 2;</code>
      * @return The bytes for name.
@@ -1196,14 +1196,14 @@ public final class DataInfo {
       name_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Student();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1214,7 +1214,7 @@ public final class DataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1232,7 +1232,7 @@ public final class DataInfo {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -1258,15 +1258,15 @@ public final class DataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.imyiren.netty.codec2.DataInfo.internal_static_Student_descriptor;
+      return DataInfo.internal_static_Student_descriptor;
     }
 
-    @java.lang.Override
+    @Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.imyiren.netty.codec2.DataInfo.internal_static_Student_fieldAccessorTable
+      return DataInfo.internal_static_Student_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.imyiren.netty.codec2.DataInfo.Student.class, com.imyiren.netty.codec2.DataInfo.Student.Builder.class);
+              Student.class, Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1280,19 +1280,19 @@ public final class DataInfo {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    private volatile Object name_;
     /**
      * <code>string name = 2;</code>
      * @return The name.
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getName() {
+      Object ref = name_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -1303,11 +1303,11 @@ public final class DataInfo {
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
+      Object ref = name_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         name_ = b;
         return b;
       } else {
@@ -1316,7 +1316,7 @@ public final class DataInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1326,7 +1326,7 @@ public final class DataInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
@@ -1338,7 +1338,7 @@ public final class DataInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1356,15 +1356,15 @@ public final class DataInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.imyiren.netty.codec2.DataInfo.Student)) {
+      if (!(obj instanceof Student)) {
         return super.equals(obj);
       }
-      com.imyiren.netty.codec2.DataInfo.Student other = (com.imyiren.netty.codec2.DataInfo.Student) obj;
+      Student other = (Student) obj;
 
       if (getId()
           != other.getId()) return false;
@@ -1374,7 +1374,7 @@ public final class DataInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1390,69 +1390,69 @@ public final class DataInfo {
       return hash;
     }
 
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(byte[] data)
+    public static Student parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(java.io.InputStream input)
+    public static Student parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseDelimitedFrom(java.io.InputStream input)
+    public static Student parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseDelimitedFrom(
+    public static Student parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Student parseFrom(
+    public static Student parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1460,21 +1460,21 @@ public final class DataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.imyiren.netty.codec2.DataInfo.Student prototype) {
+    public static Builder newBuilder(Student prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -1486,18 +1486,18 @@ public final class DataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Student)
-        com.imyiren.netty.codec2.DataInfo.StudentOrBuilder {
+        StudentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Student_descriptor;
+        return DataInfo.internal_static_Student_descriptor;
       }
 
-      @java.lang.Override
+      @Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Student_fieldAccessorTable
+        return DataInfo.internal_static_Student_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.imyiren.netty.codec2.DataInfo.Student.class, com.imyiren.netty.codec2.DataInfo.Student.Builder.class);
+                Student.class, Builder.class);
       }
 
       // Construct using com.imyiren.netty.codec2.DataInfo.Student.newBuilder()
@@ -1515,7 +1515,7 @@ public final class DataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         id_ = 0;
@@ -1525,79 +1525,79 @@ public final class DataInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Student_descriptor;
+        return DataInfo.internal_static_Student_descriptor;
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Student getDefaultInstanceForType() {
-        return com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance();
+      @Override
+      public Student getDefaultInstanceForType() {
+        return Student.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Student build() {
-        com.imyiren.netty.codec2.DataInfo.Student result = buildPartial();
+      @Override
+      public Student build() {
+        Student result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Student buildPartial() {
-        com.imyiren.netty.codec2.DataInfo.Student result = new com.imyiren.netty.codec2.DataInfo.Student(this);
+      @Override
+      public Student buildPartial() {
+        Student result = new Student(this);
         result.id_ = id_;
         result.name_ = name_;
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.imyiren.netty.codec2.DataInfo.Student) {
-          return mergeFrom((com.imyiren.netty.codec2.DataInfo.Student)other);
+        if (other instanceof Student) {
+          return mergeFrom((Student)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.imyiren.netty.codec2.DataInfo.Student other) {
-        if (other == com.imyiren.netty.codec2.DataInfo.Student.getDefaultInstance()) return this;
+      public Builder mergeFrom(Student other) {
+        if (other == Student.getDefaultInstance()) return this;
         if (other.getId() != 0) {
           setId(other.getId());
         }
@@ -1610,21 +1610,21 @@ public final class DataInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.imyiren.netty.codec2.DataInfo.Student parsedMessage = null;
+        Student parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.imyiren.netty.codec2.DataInfo.Student) e.getUnfinishedMessage();
+          parsedMessage = (Student) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1664,21 +1664,21 @@ public final class DataInfo {
         return this;
       }
 
-      private java.lang.Object name_ = "";
+      private Object name_ = "";
       /**
        * <code>string name = 2;</code>
        * @return The name.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getName() {
+        Object ref = name_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1687,11 +1687,11 @@ public final class DataInfo {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
+        Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           name_ = b;
           return b;
         } else {
@@ -1704,7 +1704,7 @@ public final class DataInfo {
        * @return This builder for chaining.
        */
       public Builder setName(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1739,13 +1739,13 @@ public final class DataInfo {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1756,18 +1756,18 @@ public final class DataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:Student)
-    private static final com.imyiren.netty.codec2.DataInfo.Student DEFAULT_INSTANCE;
+    private static final Student DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.imyiren.netty.codec2.DataInfo.Student();
+      DEFAULT_INSTANCE = new Student();
     }
 
-    public static com.imyiren.netty.codec2.DataInfo.Student getDefaultInstance() {
+    public static Student getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Student>
         PARSER = new com.google.protobuf.AbstractParser<Student>() {
-      @java.lang.Override
+      @Override
       public Student parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1780,13 +1780,13 @@ public final class DataInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Student> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.imyiren.netty.codec2.DataInfo.Student getDefaultInstanceForType() {
+    @Override
+    public Student getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1800,7 +1800,7 @@ public final class DataInfo {
      * <code>string name = 1;</code>
      * @return The name.
      */
-    java.lang.String getName();
+    String getName();
     /**
      * <code>string name = 1;</code>
      * @return The bytes for name.
@@ -1830,14 +1830,14 @@ public final class DataInfo {
       name_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Worker();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1848,7 +1848,7 @@ public final class DataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1861,7 +1861,7 @@ public final class DataInfo {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -1892,31 +1892,31 @@ public final class DataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.imyiren.netty.codec2.DataInfo.internal_static_Worker_descriptor;
+      return DataInfo.internal_static_Worker_descriptor;
     }
 
-    @java.lang.Override
+    @Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.imyiren.netty.codec2.DataInfo.internal_static_Worker_fieldAccessorTable
+      return DataInfo.internal_static_Worker_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.imyiren.netty.codec2.DataInfo.Worker.class, com.imyiren.netty.codec2.DataInfo.Worker.Builder.class);
+              Worker.class, Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    private volatile Object name_;
     /**
      * <code>string name = 1;</code>
      * @return The name.
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getName() {
+      Object ref = name_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -1927,11 +1927,11 @@ public final class DataInfo {
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
+      Object ref = name_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         name_ = b;
         return b;
       } else {
@@ -1950,7 +1950,7 @@ public final class DataInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1960,7 +1960,7 @@ public final class DataInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -1972,7 +1972,7 @@ public final class DataInfo {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1990,15 +1990,15 @@ public final class DataInfo {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.imyiren.netty.codec2.DataInfo.Worker)) {
+      if (!(obj instanceof Worker)) {
         return super.equals(obj);
       }
-      com.imyiren.netty.codec2.DataInfo.Worker other = (com.imyiren.netty.codec2.DataInfo.Worker) obj;
+      Worker other = (Worker) obj;
 
       if (!getName()
           .equals(other.getName())) return false;
@@ -2008,7 +2008,7 @@ public final class DataInfo {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2024,69 +2024,69 @@ public final class DataInfo {
       return hash;
     }
 
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(byte[] data)
+    public static Worker parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(java.io.InputStream input)
+    public static Worker parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseDelimitedFrom(java.io.InputStream input)
+    public static Worker parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseDelimitedFrom(
+    public static Worker parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.imyiren.netty.codec2.DataInfo.Worker parseFrom(
+    public static Worker parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2094,21 +2094,21 @@ public final class DataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.imyiren.netty.codec2.DataInfo.Worker prototype) {
+    public static Builder newBuilder(Worker prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -2120,18 +2120,18 @@ public final class DataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Worker)
-        com.imyiren.netty.codec2.DataInfo.WorkerOrBuilder {
+        WorkerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Worker_descriptor;
+        return DataInfo.internal_static_Worker_descriptor;
       }
 
-      @java.lang.Override
+      @Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Worker_fieldAccessorTable
+        return DataInfo.internal_static_Worker_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.imyiren.netty.codec2.DataInfo.Worker.class, com.imyiren.netty.codec2.DataInfo.Worker.Builder.class);
+                Worker.class, Builder.class);
       }
 
       // Construct using com.imyiren.netty.codec2.DataInfo.Worker.newBuilder()
@@ -2149,7 +2149,7 @@ public final class DataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -2159,79 +2159,79 @@ public final class DataInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.imyiren.netty.codec2.DataInfo.internal_static_Worker_descriptor;
+        return DataInfo.internal_static_Worker_descriptor;
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Worker getDefaultInstanceForType() {
-        return com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance();
+      @Override
+      public Worker getDefaultInstanceForType() {
+        return Worker.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Worker build() {
-        com.imyiren.netty.codec2.DataInfo.Worker result = buildPartial();
+      @Override
+      public Worker build() {
+        Worker result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public com.imyiren.netty.codec2.DataInfo.Worker buildPartial() {
-        com.imyiren.netty.codec2.DataInfo.Worker result = new com.imyiren.netty.codec2.DataInfo.Worker(this);
+      @Override
+      public Worker buildPartial() {
+        Worker result = new Worker(this);
         result.name_ = name_;
         result.age_ = age_;
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.imyiren.netty.codec2.DataInfo.Worker) {
-          return mergeFrom((com.imyiren.netty.codec2.DataInfo.Worker)other);
+        if (other instanceof Worker) {
+          return mergeFrom((Worker)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.imyiren.netty.codec2.DataInfo.Worker other) {
-        if (other == com.imyiren.netty.codec2.DataInfo.Worker.getDefaultInstance()) return this;
+      public Builder mergeFrom(Worker other) {
+        if (other == Worker.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -2244,21 +2244,21 @@ public final class DataInfo {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.imyiren.netty.codec2.DataInfo.Worker parsedMessage = null;
+        Worker parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.imyiren.netty.codec2.DataInfo.Worker) e.getUnfinishedMessage();
+          parsedMessage = (Worker) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2268,21 +2268,21 @@ public final class DataInfo {
         return this;
       }
 
-      private java.lang.Object name_ = "";
+      private Object name_ = "";
       /**
        * <code>string name = 1;</code>
        * @return The name.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getName() {
+        Object ref = name_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2291,11 +2291,11 @@ public final class DataInfo {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
+        Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           name_ = b;
           return b;
         } else {
@@ -2308,7 +2308,7 @@ public final class DataInfo {
        * @return This builder for chaining.
        */
       public Builder setName(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2373,13 +2373,13 @@ public final class DataInfo {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2390,18 +2390,18 @@ public final class DataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:Worker)
-    private static final com.imyiren.netty.codec2.DataInfo.Worker DEFAULT_INSTANCE;
+    private static final Worker DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.imyiren.netty.codec2.DataInfo.Worker();
+      DEFAULT_INSTANCE = new Worker();
     }
 
-    public static com.imyiren.netty.codec2.DataInfo.Worker getDefaultInstance() {
+    public static Worker getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Worker>
         PARSER = new com.google.protobuf.AbstractParser<Worker>() {
-      @java.lang.Override
+      @Override
       public Worker parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2414,13 +2414,13 @@ public final class DataInfo {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Worker> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public com.imyiren.netty.codec2.DataInfo.Worker getDefaultInstanceForType() {
+    @Override
+    public Worker getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2449,7 +2449,7 @@ public final class DataInfo {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\rStudent.proto\"\240\001\n\007Message\022$\n\tdata_type" +
       "\030\001 \001(\0162\021.Message.DataType\022\033\n\007student\030\002 \001" +
       "(\0132\010.StudentH\000\022\031\n\006worker\030\003 \001(\0132\007.WorkerH" +
@@ -2468,19 +2468,19 @@ public final class DataInfo {
     internal_static_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Message_descriptor,
-        new java.lang.String[] { "DataType", "Student", "Worker", "DataBody", });
+        new String[] { "DataType", "Student", "Worker", "DataBody", });
     internal_static_Student_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Student_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Student_descriptor,
-        new java.lang.String[] { "Id", "Name", });
+        new String[] { "Id", "Name", });
     internal_static_Worker_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Worker_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Worker_descriptor,
-        new java.lang.String[] { "Name", "Age", });
+        new String[] { "Name", "Age", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
