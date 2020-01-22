@@ -1,4 +1,4 @@
-package com.imyiren.netty.bound;
+package com.imyiren.netty.log4j;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
