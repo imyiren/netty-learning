@@ -606,7 +606,7 @@ public final class DataInfo {
                 Message.class, Builder.class);
       }
 
-      // Construct using com.imyiren.netty.codec2.DataInfo.Message.newBuilder()
+      // Construct using com.imyiren.io.netty.codec2.DataInfo.Message.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1500,7 +1500,7 @@ public final class DataInfo {
                 Student.class, Builder.class);
       }
 
-      // Construct using com.imyiren.netty.codec2.DataInfo.Student.newBuilder()
+      // Construct using com.imyiren.io.netty.codec2.DataInfo.Student.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2134,7 +2134,7 @@ public final class DataInfo {
                 Worker.class, Builder.class);
       }
 
-      // Construct using com.imyiren.netty.codec2.DataInfo.Worker.newBuilder()
+      // Construct using com.imyiren.io.netty.codec2.DataInfo.Worker.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2456,7 +2456,7 @@ public final class DataInfo {
       "\000\"+\n\010DataType\022\017\n\013StudentType\020\000\022\016\n\nWorker" +
       "Type\020\001B\n\n\010dataBody\"#\n\007Student\022\n\n\002id\030\001 \001(" +
       "\005\022\014\n\004name\030\002 \001(\t\"#\n\006Worker\022\014\n\004name\030\001 \001(\t\022" +
-      "\013\n\003age\030\002 \001(\005B&\n\030com.imyiren.netty.codec2" +
+      "\013\n\003age\030\002 \001(\005B&\n\030com.imyiren.io.netty.codec2" +
       "B\010DataInfoH\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

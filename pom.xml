@@ -21,6 +21,7 @@
         <module>netty-in-out-bound</module>
         <module>netty-log4j</module>
         <module>netty-stick-unpack</module>
+        <module>netty-source</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -31,7 +32,6 @@
             <artifactId>netty-all</artifactId>
             <version>4.1.45.Final</version>
         </dependency>
-
     </dependencies>
 
 </project>

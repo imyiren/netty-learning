@@ -1,7 +1,7 @@
 // 版本
 syntax = "proto3";
 option optimize_for = SPEED;
-option java_package = "com.imyiren.netty.codec2";
+option java_package = "com.imyiren.io.netty.codec2";
 option java_outer_classname = "DataInfo";
 
 message Message{
