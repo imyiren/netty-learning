@@ -22,16 +22,30 @@
         <module>netty-log4j</module>
         <module>netty-stick-unpack</module>
         <module>netty-source</module>
+        <module>netty-x-geek-one</module>
+        <module>netty-x-geek-gateway</module>
+        <module>netty-x-geek-gateway-demo</module>
     </modules>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.45.Final</version>
+            <version>4.1.59.Final</version>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
